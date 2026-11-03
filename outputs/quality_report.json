@@ -1,0 +1,223 @@
+{
+  "total_checks": 27,
+  "passed": 24,
+  "failed": 3,
+  "results": [
+    {
+      "layer": "raw",
+      "table": "pp-2026.csv",
+      "check": "min_rows",
+      "column": null,
+      "passed": true,
+      "details": "457,963 rows (minimum 10,000)"
+    },
+    {
+      "layer": "raw",
+      "table": "pp-2026.csv",
+      "check": "unique",
+      "column": "transaction_id",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "raw",
+      "table": "pp-2026.csv",
+      "check": "not_null",
+      "column": "postcode",
+      "passed": false,
+      "details": "625 null values"
+    },
+    {
+      "layer": "raw",
+      "table": "pp-2026.csv",
+      "check": "accepted_values",
+      "column": "property_type",
+      "passed": false,
+      "details": "14,456 unexpected values: ['O']"
+    },
+    {
+      "layer": "raw",
+      "table": "pp-2026.csv",
+      "check": "range",
+      "column": "CAST(price AS BIGINT)",
+      "passed": false,
+      "details": "439 values outside [10000, 20000000]"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "min_rows",
+      "column": null,
+      "passed": true,
+      "details": "10,666,409 rows (minimum 550,000)"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "unique",
+      "column": "transaction_id",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "not_null",
+      "column": "price",
+      "passed": true,
+      "details": "0 null values"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "not_null",
+      "column": "date_of_transfer",
+      "passed": true,
+      "details": "0 null values"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "not_null",
+      "column": "property_type_name",
+      "passed": true,
+      "details": "0 null values"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "range",
+      "column": "price",
+      "passed": true,
+      "details": "0 values outside [1, None]"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "accepted_values",
+      "column": "property_type",
+      "passed": true,
+      "details": "0 unexpected values: []"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "accepted_values",
+      "column": "duration",
+      "passed": true,
+      "details": "0 unexpected values: []"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "accepted_values",
+      "column": "price_band",
+      "passed": true,
+      "details": "0 unexpected values: []"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "regex_match",
+      "column": "postcode",
+      "passed": true,
+      "details": "0 values not matching /^[A-Z]{1,2}[0-9][A-Z0-9]? [0-9][A-Z]{2}$/"
+    },
+    {
+      "layer": "silver",
+      "table": "sales (parquet)",
+      "check": "partition_matches_year",
+      "column": "year",
+      "passed": true,
+      "details": "rows whose transfer year disagrees with their partition"
+    },
+    {
+      "layer": "gold",
+      "table": "dim_date",
+      "check": "unique",
+      "column": "date_key",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "gold",
+      "table": "dim_location",
+      "check": "unique",
+      "column": "location_key",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "gold",
+      "table": "dim_property",
+      "check": "unique",
+      "column": "property_key",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "gold",
+      "table": "fact_sale",
+      "check": "unique",
+      "column": "sale_key",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "gold",
+      "table": "fact_sale",
+      "check": "unique",
+      "column": "transaction_id",
+      "passed": true,
+      "details": "0 duplicate values"
+    },
+    {
+      "layer": "gold",
+      "table": "fact_sale",
+      "check": "row_count_matches_source",
+      "column": null,
+      "passed": true,
+      "details": "10,666,409 vs 10,666,409"
+    },
+    {
+      "layer": "gold",
+      "table": "fact_sale",
+      "check": "referential_integrity",
+      "column": "date_key",
+      "passed": true,
+      "details": "0 orphan rows"
+    },
+    {
+      "layer": "gold",
+      "table": "fact_sale",
+      "check": "referential_integrity",
+      "column": "location_key",
+      "passed": true,
+      "details": "0 orphan rows"
+    },
+    {
+      "layer": "gold",
+      "table": "fact_sale",
+      "check": "referential_integrity",
+      "column": "property_key",
+      "passed": true,
+      "details": "0 orphan rows"
+    },
+    {
+      "layer": "gold",
+      "table": "vw_city_comparison",
+      "check": "min_rows",
+      "column": null,
+      "passed": true,
+      "details": "77 rows (minimum 50)"
+    },
+    {
+      "layer": "gold",
+      "table": "vw_liverpool_districts",
+      "check": "min_rows",
+      "column": null,
+      "passed": true,
+      "details": "39 rows (minimum 10)"
+    }
+  ]
+}

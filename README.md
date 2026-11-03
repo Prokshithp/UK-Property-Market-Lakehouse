@@ -8,9 +8,10 @@ DuckDB, Parquet, Dask and Spark — and a **high-performance-computing benchmark
 how the same workload scales across engines and cores.
 
 ```
-Land Registry CSVs ──► bronze  data/raw/pp-YYYY.csv             incremental, SHA-256 manifest
-                 ──► silver  data/processed/sales/year=YYYY/   DuckDB clean → ZSTD Parquet, partitioned
-                 ──► gold    data/analytics/property.duckdb    star schema + 6 analytical SQL views
+Land Registry CSVs ──► bronze  data/raw/pp-YYYY.csv                 incremental, SHA-256 manifest
+                   ──► silver  data/processed/sales/year=YYYY/      DuckDB clean → ZSTD Parquet, partitioned
+                   ──► gold    data/analytics/property.duckdb       star schema + 6 analytical SQL views
+
 quality.py gates every layer · benchmark.py (pandas / multiprocessing / Dask / DuckDB / Spark × 1-8 cores)
 visualize.py + report.py publish charts, tables and a markdown report
 ```

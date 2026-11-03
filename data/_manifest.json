@@ -1,0 +1,70 @@
+{
+  "files": {
+    "2016": {
+      "bytes": 181670991,
+      "sha256": "57e6e93db337be40c3c44c67a98494a773accb06a26b19b7f9c3bb012d7a0646",
+      "downloaded_at": "2026-11-01T17:04:04+00:00",
+      "source": "manual"
+    },
+    "2017": {
+      "bytes": 185360035,
+      "sha256": "554864ce84574322df71d5ec0be482e2ebf904b90b3e288c6fb9626d3a48cf22",
+      "downloaded_at": "2026-11-01T17:04:04+00:00",
+      "source": "manual"
+    },
+    "2018": {
+      "bytes": 180179408,
+      "sha256": "dbf8e95e719630fa8b8d0c90bea52e9e282e7bb6c938951737d4ed65c7655eda",
+      "downloaded_at": "2026-11-01T17:04:04+00:00",
+      "source": "manual"
+    },
+    "2019": {
+      "bytes": 176123646,
+      "sha256": "a029e2f1bb8b05301fec11293743d135cc153c4e9405bb06b8fcaeb6d54eb55f",
+      "downloaded_at": "2026-11-01T17:04:04+00:00",
+      "source": "manual"
+    },
+    "2020": {
+      "bytes": 156376092,
+      "sha256": "774105b1adf16e8c44b16341e471b5e5d2cd85a3b48364ad468d4a090c9b4f4a",
+      "downloaded_at": "2026-11-01T17:04:04+00:00",
+      "source": "manual"
+    },
+    "2021": {
+      "bytes": 223346222,
+      "sha256": "cf3d843e453b5f9b6168619a2adf6b07dd2cc845594600caeec1960af409f9fe",
+      "downloaded_at": "2026-11-01T17:04:05+00:00",
+      "source": "manual"
+    },
+    "2022": {
+      "bytes": 187939965,
+      "sha256": "f007744cb442e74720dace7183f1f1d60aca8f197a44411a3889fab5c4b242d9",
+      "downloaded_at": "2026-11-01T17:04:05+00:00",
+      "source": "manual"
+    },
+    "2023": {
+      "bytes": 150416177,
+      "sha256": "7f3bf185480e77347a1b9184ce98457913b74d6b24117030b2389e15e4191272",
+      "downloaded_at": "2026-11-01T17:04:05+00:00",
+      "source": "manual"
+    },
+    "2024": {
+      "bytes": 162559048,
+      "sha256": "340547fc31fd1635cf41db7f9ddcaf3c4f6b57d43393597cee42f4e7f45454b9",
+      "downloaded_at": "2026-11-01T17:04:05+00:00",
+      "source": "manual"
+    },
+    "2025": {
+      "bytes": 172845579,
+      "sha256": "efa08621a077079f59ac3de66cdb7688323310148c451dac0d0f1d72489f9749",
+      "downloaded_at": "2026-11-01T17:04:05+00:00",
+      "source": "manual"
+    },
+    "2026": {
+      "bytes": 79620686,
+      "sha256": "568aa30f85cffad4582193d84d68d9491b97913c80c905e0d7b681ce32d04d71",
+      "downloaded_at": "2026-11-01T17:04:05+00:00",
+      "source": "manual"
+    }
+  }
+}
